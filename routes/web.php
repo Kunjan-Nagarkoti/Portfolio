@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PortfolioController;
+use App\Models\portfolio;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +35,9 @@ Route::get('/contact', function () {
     return view('contact');
     
 });
+
+Route::post('/contact', [PortfolioController::class, 'store']);
+
+// Route::post('/contact', function () {
+
+// });
